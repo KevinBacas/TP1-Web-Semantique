@@ -2,6 +2,9 @@
 
 ## Requête 1:
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
 SELECT DISTINCT ?name
 WHERE {
   ?r dbo:genre dbr:Compiler .
@@ -16,10 +19,13 @@ Cette requête retourne les noms ("label"), des compilateurs cross-platform dans
 
 ## Requête 2:
 ```sparql
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
 SELECT ?name ?externalLink
 WHERE {
   ?r dbo:genre dbr:Compiler .
-  { ?r dbo:license <http://dbpedia.org/resource/Proprietary_software> }
+  { ?r dbo:license dbr:Proprietary_software }
   UNION
   { ?r dbo:license dbr:Public_domain } .
   ?r dbp:name ?name .
@@ -32,6 +38,7 @@ Renvoi la liste de tous les noms associés aux liens externes présents sur Wiki
 
 ## Requête 3 :
 ```sparql
+PREFIX dbp: <http://dbpedia.org/property/>
 SELECT DISTINCT ?name
 WHERE {
   ?r dbp:dateOfDeath ?dob .
@@ -48,6 +55,9 @@ Retourne toutes les personnes nées après 1992 et dans la limite de 1000 entré
 
 ## Requête 4 :
 ```sparql
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
 SELECT ?products
 WHERE {
   ?r dbo:numberOfEmployees ?nbEmployees .
