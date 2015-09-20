@@ -78,3 +78,21 @@ LIMIT 1000
 
 ### Explication :
 Retourne tous les produits des entreprises de type "Public_company" qui ont plus de 49 employés travaillant dans l'indutrie du "Software" ou du "Consumer_electronics". Les résultats sont regroupés par le nom de l'entreprise et ils sont ordonnés en fonction du revenu des entreprise. Les entreprises au plus fort revenu apparaissent donc en premier. La requête renverra au maximum 1000 entrées.
+
+Requête 5 :
+```sparql
+PREFIX prop: <http://dbpedia.org/property/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+ASK
+{
+  dbr:Amazon_River prop:length ?amazon .
+  dbr:Nile prop:length ?nile .
+  FILTER(?amazon > ?nile) .
+}
+```
+
+### Explication :
+Est-ce que la propriété length de "Amazon_River" est supérieur à "Nile" ? En d'autres mots : Est-ce que l'Amazon est plus grand que le Nil ?
+
+### Résultat :
+`false`. Le Nil est donc plus grand que l'Amazon. Ce résultat se justifie en regardant les information sur Internet.
