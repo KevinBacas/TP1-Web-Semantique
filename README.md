@@ -29,3 +29,18 @@ LIMIT 100
 ```
 ### Explication :
 Renvoi la liste de tous les noms associés aux liens externes présents sur Wikipédia des compilateurs sous license "Proprietary Software" ou "Public Domain" dans la limite de 100 entrées.
+
+## Requête 3 :
+```sparql
+SELECT DISTINCT ?name
+WHERE {
+  ?r dbp:dateOfDeath ?dob .
+  ?r dbp:name ?name .
+  FILTER(?dob > 1992)
+}
+ORDER BY DESC (?dob)
+LIMIT 1000
+```
+
+### Explication :
+Retourne toutes les personnes nées après 1992 et dans la limite de 1000 entrées. Les personnes nées le plus récemment sont affichées en premier.
