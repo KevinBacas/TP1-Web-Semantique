@@ -66,4 +66,4 @@ LIMIT 1000
 ```
 
 ### Explication :
-Retourne tous les produits des entreprises de type "Public_company" qui ont plus de 49 employés travaillant dans l'indutrie du "Software" ou du "Consumer_electronics". Les résultats sont regroupés par nom de l'entreprise et ordonnés en fonction du revenu des entreprise. Les entreprises au plus fort revenu apparaissent en premier. La requête renverra au maximum 1000 entrées.
+Retourne tous les produits des entreprises de type "Public_company" qui ont plus de 49 employés travaillant dans l'indutrie du "Software" ou du "Consumer_electronics". Les résultats sont regroupés par le nom de l'entreprise et ils sont ordonnés en fonction du revenu des entreprise. Les entreprises au plus fort revenu apparaissent donc en premier. La requête renverra au maximum 1000 entrées.
