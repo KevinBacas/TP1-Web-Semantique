@@ -44,3 +44,26 @@ LIMIT 1000
 
 ### Explication :
 Retourne toutes les personnes nées après 1992 et dans la limite de 1000 entrées. Les personnes nées le plus récemment sont affichées en premier.
+
+
+## Requête 4 :
+```sparql
+SELECT ?products
+WHERE {
+  ?r dbo:numberOfEmployees ?nbEmployees .
+  ?r dbo:product ?products .
+  { ?r dbo:industry dbr:Software }
+  UNION
+  { ?r dbo:industry dbr:Consumer_electronics } .
+  ?r dbp:name ?name .
+  ?r dbo:operatingIncome ?income .
+  ?r dbo:type dbr:Public_company .
+  FILTER(?nbEmployees > 49)
+}
+GROUP BY (?name)
+ORDER BY DESC (?income)
+LIMIT 1000
+```
+
+### Explication :
+Retourne tous les produits des entreprises de type "Public_company" qui ont plus de 49 employés travaillant dans l'indutrie du "Software" ou du "Consumer_electronics". Les résultats sont regroupés par nom de l'entreprise et ordonnés en fonction du revenu des entreprise. Les entreprises au plus fort revenu apparaissent en premier. La requête renverra au maximum 1000 entrées.
