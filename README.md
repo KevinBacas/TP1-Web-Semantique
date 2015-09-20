@@ -92,7 +92,7 @@ ASK
 ```
 
 ### Explication :
-Est-ce que la propriété length de "Amazon_River" est supérieur à "Nile" ? En d'autres mots : Est-ce que l'Amazon est plus grand que le Nil ?
+Est-ce que la propriété length de "Amazon_River" est supérieur à "Nile" ? En d'autres mots : Est-ce que l'Amazon est plus long que le Nil ?
 
 ### Résultat :
 `false`. Le Nil est donc plus grand que l'Amazon. Ce résultat se justifie en regardant les information sur Internet.
