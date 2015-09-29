@@ -201,3 +201,138 @@ dbr:Max_Band    vcard:FN    "Band"@en .
 <http://dbpedia.org/resource/Band,_Mure\u0219>    vcard:FN    "Band"@en .
 <http://dbpedia.org/resource/Believers_(\u00A1Mayday!_album)>    vcard:FN    "Believers"@en .
 ```
+
+## Requête 7 :
+
+```sparql
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+DESCRIBE ?ford WHERE {
+  ?ford foaf:name "Bush"@en .
+}
+LIMIT 1
+```
+
+### Explication :
+On décrit les ressources qui ont comme nom "Bush" en version anglaise. Dans la limite d'une seule entrée.
+
+### Résultats :
+
+```turtle
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+dbr:Bush    dbo:wikiPageDisambiguates    <http://dbpedia.org/resource/Bush,_Illinois> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix yago:    <http://dbpedia.org/class/yago/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    rdf:type    yago:Tract108673395 .
+@prefix ns4:    <http://schema.org/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    rdf:type    ns4:Place ,
+        <http://dbpedia.org/class/yago/PopulatedPlacesInWilliamsonCounty,Illinois> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+<http://dbpedia.org/resource/Bush,_Illinois>    rdf:type    owl:Thing ,
+        dbo:PopulatedPlace ,
+        yago:VillagesInIllinois ,
+        yago:Village108672738 ,
+        dbo:Location ,
+        yago:YagoGeoEntity .
+@prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+<http://dbpedia.org/resource/Bush,_Illinois>    rdf:type    geo:SpatialThing ,
+        yago:YagoPermanentlyLocatedEntity ,
+        dbo:Place ,
+        dbo:Settlement ,
+        yago:Location100027167 ,
+        yago:Object100002684 ,
+        yago:YagoLegalActorGeo ,
+        yago:Site108651247 ,
+        yago:Settlement108672562 ,
+        yago:Region108630985 ,
+        yago:PhysicalEntity100001930 ,
+        yago:GeographicalArea108574314 .
+@prefix wikidata:    <http://www.wikidata.org/entity/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    rdf:type    wikidata:Q486972 .
+@prefix ns8:    <http://wikidata.org/entity/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    owl:sameAs    ns8:Q2469309 ,
+        <http://es.dbpedia.org/resource/Bush_(Illinois)> ,
+        <http://yago-knowledge.org/resource/Bush,_Illinois> .
+@prefix ns9:    <http://wikidata.dbpedia.org/resource/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    owl:sameAs    ns9:Q2469309 ,
+        <http://sws.geonames.org/4234905/> ,
+        <http://pt.dbpedia.org/resource/Bush_(Illinois)> ,
+        <http://nl.dbpedia.org/resource/Bush_(Illinois)> ,
+        <http://rdf.freebase.com/ns/m.0sjhm> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix georss:    <http://www.georss.org/georss/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    georss:point    "37.841388888888886 -89.13222222222223"^^xsd:string .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+<http://dbpedia.org/resource/Bush,_Illinois>    rdfs:label    "\u0628\u0648\u0634 (\u0625\u0644\u064A\u0646\u0648\u064A)"@ar ,
+        "Bush, Illinois"@en ,
+        "Bush (Illinois)"@es ,
+        "Bush (Illinois)"@pt ,
+        "Bush (Illinois)"@nl ;
+    rdfs:comment    "\u0628\u0648\u0634 (\u0625\u0644\u064A\u0646\u0648\u064A) (\u0628\u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629: Bush, Illinois) \u0647\u064A \u0645\u0646\u0637\u0642\u0629 \u0633\u0643\u0646\u064A\u0629 \u062A\u0642\u0639 \u0641\u064A \u0627\u0644\u0648\u0644\u0627\u064A\u0627\u062A \u0627\u0644\u0645\u062A\u062D\u062F\u0629 \u0641\u064A \u0625\u0644\u064A\u0646\u0648\u064A."@ar ,
+        "Bush is een plaats (village) in de Amerikaanse staat Illinois, en valt bestuurlijk gezien onder Williamson County."@nl ,
+        "Bush is a village in Williamson County, Illinois, United States. As of the 2000 census, the village population was 257."@en .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    foaf:name    "Bush"@en .
+@prefix dbp:    <http://dbpedia.org/property/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    dbp:name    "Bush"@en ;
+    geo:lat    "37.841388702392578125"^^xsd:float ;
+    geo:long    "-89.13222503662109375"^^xsd:float ;
+    foaf:depiction    <http://commons.wikimedia.org/wiki/Special:FilePath/Illinois_-_outline_map.svg> .
+@prefix ns15:    <http://www.w3.org/ns/prov#> .
+<http://dbpedia.org/resource/Bush,_Illinois>    ns15:wasDerivedFrom    <http://en.wikipedia.org/wiki/Bush,_Illinois?oldid=628856873> ;
+    dbo:abstract    "\u0628\u0648\u0634 (\u0625\u0644\u064A\u0646\u0648\u064A) (\u0628\u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629: Bush, Illinois) \u0647\u064A \u0645\u0646\u0637\u0642\u0629 \u0633\u0643\u0646\u064A\u0629 \u062A\u0642\u0639 \u0641\u064A \u0627\u0644\u0648\u0644\u0627\u064A\u0627\u062A \u0627\u0644\u0645\u062A\u062D\u062F\u0629 \u0641\u064A \u0625\u0644\u064A\u0646\u0648\u064A."@ar ,
+        "Bush is a village in Williamson County, Illinois, United States. As of the 2000 census, the village population was 257."@en ,
+        "Bush is een plaats (village) in de Amerikaanse staat Illinois, en valt bestuurlijk gezien onder Williamson County."@nl ;
+    dbo:areaCode    "618"^^xsd:string ;
+    dbo:country    dbr:United_States ;
+    dbo:daylightSavingTimeZone    dbr:Central_Time_Zone ;
+    dbo:postalCode    "62924"^^xsd:string ;
+    dbo:region    <http://dbpedia.org/resource/Williamson_County,_Illinois> ;
+    dbo:state    dbr:Illinois ;
+    dbo:timeZone    dbr:Central_Time_Zone ;
+    dbo:type    dbr:List_of_towns_and_villages_in_Illinois ;
+    foaf:isPrimaryTopicOf    <http://en.wikipedia.org/wiki/Bush,_Illinois> .
+@prefix virtrdf:    <http://www.openlinksw.com/schemas/virtrdf#> .
+<http://dbpedia.org/resource/Bush,_Illinois>    geo:geometry    "POINT(-89.132225036621 37.841388702393)"^^virtrdf:Geometry ;
+    dbo:thumbnail    <http://commons.wikimedia.org/wiki/Special:FilePath/Illinois_-_outline_map.svg?width=300> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+<http://dbpedia.org/resource/Bush,_Illinois>    dct:subject    <http://dbpedia.org/resource/Category:Villages_in_Williamson_County,_Illinois> .
+@prefix dbc:    <http://dbpedia.org/resource/Category:> .
+<http://dbpedia.org/resource/Bush,_Illinois>    dct:subject    dbc:Villages_in_Illinois ;
+    dbo:wikiPageID    112070 ;
+    dbo:wikiPageRevisionID    628856873 ;
+    dbp:areaCode    618 ;
+    dbp:areaImperial    0.46000000000000001998 ;
+    dbp:areaLandImperial    0.46000000000000001998 ;
+    dbp:areaWaterImperial    0.010000000000000000208 ;
+    dbp:category    dbr:List_of_towns_and_villages_in_Illinois ;
+    dbp:commons    "Bush, Illinois"@en ;
+    dbp:country    "United States"@en ;
+    dbp:districtType    "Township"@en ;
+    dbp:latD    37 ;
+    dbp:latM    50 ;
+    dbp:latNs    "N"@en ;
+    dbp:latS    29 ;
+    dbp:leaderType    "Village president"@en ;
+    dbp:longD    89 ;
+    dbp:longEw    "W"@en ;
+    dbp:longM    7 ;
+    dbp:longS    56 ;
+    dbp:map    "Illinois - outline map.svg"@en ;
+    dbp:mapCaption    "Location of Bush within Illinois"@en ;
+    dbp:mapLocator    "Illinois2"@en ;
+    dbp:populationDate    2000 ;
+    dbp:populationDensityImperial    558 ;
+    dbp:postalCode    62924 ;
+    dbp:region    <http://dbpedia.org/resource/Williamson_County,_Illinois> ;
+    dbp:regionType    "County"@en ;
+    dbp:state    "Illinois"@en ;
+    dbp:timezone    dbr:Central_Time_Zone ;
+    dbp:timezoneDst    dbr:Central_Time_Zone ;
+    dbp:utcOffset    -6 ;
+    dbp:utcOffsetDst    -5 ;
+    dbp:mapBackground    "Illinois - background map.png"@en ;
+    dbp:hasPhotoCollection    <http://wifo5-03.informatik.uni-mannheim.de/flickrwrappr/photos/Bush,_Illinois> .
+<http://dbpedia.org/resource/Bush,_IL>    dbo:wikiPageRedirects    <http://dbpedia.org/resource/Bush,_Illinois> .
+<http://en.wikipedia.org/wiki/Bush,_Illinois>    foaf:primaryTopic    <http://dbpedia.org/resource/Bush,_Illinois> .
+```
