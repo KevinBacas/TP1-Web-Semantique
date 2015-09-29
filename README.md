@@ -16,6 +16,9 @@ WHERE {
 LIMIT 10
 ```
 
+### Explication :
+Cette requête retourne les noms ("label"), des compilateurs cross-platform dans toutes les langues et dans la limite de 100 entrées.
+
 ### Résultat :
 
 | name
@@ -30,9 +33,6 @@ LIMIT 10
 | "GNU Compiler Collection"@nl
 | "GNU Compiler Collection"@pl
 | "GNU Compiler Collection"@pt
-
-### Explication :
-Cette requête retourne les noms ("label"), des compilateurs cross-platform dans toutes les langues et dans la limite de 100 entrées.
 
 ## Requête 2:
 
@@ -52,6 +52,9 @@ WHERE {
 LIMIT 10
 ```
 
+### Explication :
+Renvoi la liste de tous les noms associés aux liens externes présents sur Wikipédia des compilateurs sous license "Proprietary Software" ou "Public Domain" dans la limite de 100 entrées.
+
 ### Résultat :
 
 name                                        | externalLink
@@ -67,9 +70,6 @@ name                                        | externalLink
 "Le Lisp"@en                                | http://www.eligis.com/lelisp
 "Le Lisp"@en                                | http://www.softwarepreservation.org/projects/LISP/le_lisp/
 
-### Explication :
-Renvoi la liste de tous les noms associés aux liens externes présents sur Wikipédia des compilateurs sous license "Proprietary Software" ou "Public Domain" dans la limite de 100 entrées.
-
 ## Requête 3 :
 
 ```sparql
@@ -83,6 +83,9 @@ WHERE {
 ORDER BY DESC (?dob)
 LIMIT 10
 ```
+
+### Explication :
+Retourne toutes les personnes nées après 1992 et dans la limite de 1000 entrées. Les personnes nées le plus récemment sont affichées en premier.
 
 ### Résultats :
 
@@ -98,9 +101,6 @@ LIMIT 10
 | "Ursula of Brandenburg"@en
 | "Waldemar VI, Prince of Anhalt-Kothen"@en
 | "De Ros, Edmund de 10th Baron de Ros"@en
-
-### Explication :
-Retourne toutes les personnes nées après 1992 et dans la limite de 1000 entrées. Les personnes nées le plus récemment sont affichées en premier.
 
 ## Requête 4 :
 
@@ -125,6 +125,9 @@ ORDER BY DESC (?income)
 LIMIT 10
 ```
 
+### Explication :
+Retourne tous les produits des entreprises de type "Public_company" qui ont plus de 49 employés travaillant dans l'indutrie du "Software" ou du "Consumer_electronics". Les résultats sont regroupés par le nom de l'entreprise et ils sont ordonnés en fonction du revenu des entreprise. Les entreprises au plus fort revenu apparaissent donc en premier. La requête renverra au maximum 1000 entrées.
+
 ### Résultats :
 
 | products
@@ -140,9 +143,6 @@ LIMIT 10
 | dbr:Television
 | dbr:DVD_player
 
-### Explication :
-Retourne tous les produits des entreprises de type "Public_company" qui ont plus de 49 employés travaillant dans l'indutrie du "Software" ou du "Consumer_electronics". Les résultats sont regroupés par le nom de l'entreprise et ils sont ordonnés en fonction du revenu des entreprise. Les entreprises au plus fort revenu apparaissent donc en premier. La requête renverra au maximum 1000 entrées.
-
 ## Requête 5 :
 
 ```sparql
@@ -156,8 +156,8 @@ ASK
 }
 ```
 
-### Résultat :
-`false`. Le Nil est donc plus grand que l'Amazon. Ce résultat se justifie en regardant les information sur Internet.
-
 ### Explication :
 Est-ce que la propriété length de "Amazon_River" est supérieur à "Nile" ? En d'autres mots : Est-ce que l'Amazon est plus long que le Nil ?
+
+### Résultat :
+`false`. Le Nil est donc plus grand que l'Amazon. Ce résultat se justifie en regardant les information sur Internet.
