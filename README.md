@@ -161,3 +161,43 @@ Est-ce que la propriété length de "Amazon_River" est supérieur à "Nile" ? En
 
 ### Résultat :
 `false`. Le Nil est donc plus grand que l'Amazon. Ce résultat se justifie en regardant les information sur Internet.
+
+## Requête 6 :
+
+```sparql
+PREFIX vCard: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+CONSTRUCT {
+  ?X vCard:FN ?name .
+  ?X vCard:URL ?url .
+  ?X vCard:TITLE ?title .
+}
+WHERE {
+  OPTIONAL { ?X foaf:name ?name . FILTER isLiteral(?name) . }
+  OPTIONAL { ?X foaf:homepage ?url . FILTER isURI(?url) . }
+  OPTIONAL { ?X foaf:title ?title . FILTER isLiteral(?title) . }
+}
+LIMIT 10
+```
+
+### Explication :
+On construit un nouveau triplet avec un nom, une URL et un titre avec les propriétés foaf:name pour le nom, foad:homepage pour l'URL et foad:title pour le titre. Dans la limite de 10 entrées.
+
+### Réponse :
+
+```turtle
+@prefix vcard:    <http://www.w3.org/2001/vcard-rdf/3.0#> .
+<http://dbpedia.org/resource/Believers_(film)>    vcard:FN   "Believers"@en ;
+  vcard:URL    <http://www.believersmovie.com> .
+<http://dbpedia.org/resource/Believers_(A._A._Bondy_album)>    vcard:FN    "Believers"@en .
+<http://dbpedia.org/resource/Believers_(Babylon_5)>    vcard:FN    "Believers"@en .
+<http://dbpedia.org/resource/Believers_(Don_McLean_album)>    vcard:FN    "Believers"@en .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+dbr:Max_Band    vcard:FN    "Band"@en .
+<http://dbpedia.org/resource/Band,_Iran>    vcard:FN    "Band"@en .
+<http://dbpedia.org/resource/Academy_Award_(radio)>    vcard:FN    "Academy Award"@en .
+<http://dbpedia.org/resource/Archive_(band)>    vcard:FN    "Archive"@en ;
+  vcard:URL    <http://archiveofficial.com> .
+<http://dbpedia.org/resource/Band,_Mure\u0219>    vcard:FN    "Band"@en .
+<http://dbpedia.org/resource/Believers_(\u00A1Mayday!_album)>    vcard:FN    "Believers"@en .
+```
